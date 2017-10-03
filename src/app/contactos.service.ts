@@ -20,6 +20,12 @@ export class ContactosService {
     return this._nombres;
   }
 
+  agregarContacto(contacto:Contacto):void{
+    //hemos creado esta función que añade al array un contacto que le llegue.
+    this._nombres.push(contacto);
+  }
+
+
   contactoEliminado(nombre:Contacto):void{
     //console.log(nombre);
     this._nombres=this._nombres.filter(function(n){

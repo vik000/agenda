@@ -31,6 +31,14 @@ constructor(private _contactosService:ContactosService){
     console.log('Estoy en el hook OnInit! :D');
     this.nombres = this._contactosService.obtenerContactos();
   }
+
+  crearContacto(contacto:Contacto):void{
+    //vamos a buscar el servicio.
+    this._contactosService.agregarContacto(contacto);
+    this.nombres = this._contactosService.obtenerContactos();
+  }
+
+
   contactoEliminado(nombre:Contacto):void{
     //console.log(nombre);
     this._contactosService.contactoEliminado(nombre);

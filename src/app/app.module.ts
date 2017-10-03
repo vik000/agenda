@@ -7,6 +7,10 @@ import { ListaContactosComponent } from './lista-contactos/lista-contactos.compo
 import { ContactosService } from './contactos.service';
 import { FormularioContactoComponent } from './formulario-contacto/formulario-contacto.component'
 
+import { AppRoutingModule } from './app-routing/app-routing.module';
+import { RutaAComponent } from './ruta-a/ruta-a.component';
+import { RutaBComponent } from './ruta-b/ruta-b.component';
+
 //Usamos el decorador NgModule para que la clase decorada se comporte como un módulo.
 @NgModule({
   //Metadatos:
@@ -14,12 +18,15 @@ import { FormularioContactoComponent } from './formulario-contacto/formulario-co
   declarations: [
     AppComponent,
     ListaContactosComponent,
-    FormularioContactoComponent
+    FormularioContactoComponent,
+    RutaAComponent,
+    RutaBComponent
   ],
   //En imports indicamos todos aquellos módulos de los cuales mi aplicación depende
   imports: [
     BrowserModule, //Este import hace que se vea como una web, para hacer una nativa, importaremos otra cosa.
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AppRoutingModule,
   ],
   //En providers indicamos todos aquellos proveedores de clase o valores que puedan ser inyectados (servicios y dependendencias, por ejemplo)
   //Cli no nos lo mete por defecto al generarlo como hace con componentes

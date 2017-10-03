@@ -2,7 +2,11 @@
   <h1>Agenda</h1>
 </header>
 
-<app-formulario-contacto></app-formulario-contacto>
+
+<!-- Zona dinámica -->
+<router-outlet></router-outlet>
+
+<app-formulario-contacto (botonGuardarPulsado)="crearContacto($event)"></app-formulario-contacto>
 
 <app-lista-contactos
 [contactos]="nombres"
