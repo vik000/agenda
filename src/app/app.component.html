@@ -1,11 +1,20 @@
 <header>
   <h1>Agenda</h1>
 </header>
+
+<app-formulario-contacto></app-formulario-contacto>
+
 <app-lista-contactos
 [contactos]="nombres"
 (botonEliminarPulsado)="contactoEliminado($event)">
+<!--Con [contactos] estoy evaluando primero el array de string/clase Contacto
+antes de pasarlo como atributo. Es necesario en @Input-->
 </app-lista-contactos>
-<app-lista-contactos [contactos]="nombres2"></app-lista-contactos>
+
+
+
+<!-- Otros ejemplos de uso de [contactos]: -->
+<!-- <app-lista-contactos [contactos]="nombres2"></app-lista-contactos>
 <app-lista-contactos [contactos]="nombres3"></app-lista-contactos>
 <app-lista-contactos [contactos]="['uno','dos','3']"></app-lista-contactos>
-<app-lista-contactos [contactos]="nombres.slice(0,2)"></app-lista-contactos>
+<app-lista-contactos [contactos]="nombres.slice(0,2)"></app-lista-contactos> -->

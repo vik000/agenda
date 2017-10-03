@@ -24,7 +24,7 @@ export class AppComponent implements OnInit{
 //Anotamos un parámetro con el tipo de sercicio a inyectar
 //y añadimos el modificador de acceso correspondiente al parámetro.
 constructor(private _contactosService:ContactosService){
-  console.log('Componente isntanciad y servicio inyectado');
+  console.log('Componente isntanciado y servicio inyectado');
 }
 
   ngOnInit():void{ //con void estamos tipando la clase de la función.
