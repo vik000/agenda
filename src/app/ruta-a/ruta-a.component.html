@@ -1,3 +1,6 @@
-<p>
-  ruta-a works!
-</p>
+<app-lista-contactos
+[contactos]="nombres"
+(botonEliminarPulsado)="contactoEliminado($event)">
+<!--Con [contactos] estoy evaluando primero el array de string/clase Contacto
+antes de pasarlo como atributo. Es necesario en @Input-->
+</app-lista-contactos>

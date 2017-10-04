@@ -2,20 +2,21 @@
   <h1>Agenda</h1>
 </header>
 
+<!--
+Barra de navegación.
+En la directiva routerLink indicamos la ruta (path)
+a la cual queremos navegar cuando pulsemos sobre dicho enlace.
+Esta ruta tiene que estar definida en el módulo de routing.
+-->
+<nav>
+  <ul>
+    <li><a routerLink="/lista-contactos">Mis Contactos</a></li>
+    <li><a routerLink="/nuevo-contacto">Nuevo Contacto</a></li>
+  </ul>
+</nav>
 
 <!-- Zona dinámica -->
 <router-outlet></router-outlet>
-
-<app-formulario-contacto (botonGuardarPulsado)="crearContacto($event)"></app-formulario-contacto>
-
-<app-lista-contactos
-[contactos]="nombres"
-(botonEliminarPulsado)="contactoEliminado($event)">
-<!--Con [contactos] estoy evaluando primero el array de string/clase Contacto
-antes de pasarlo como atributo. Es necesario en @Input-->
-</app-lista-contactos>
-
-
 
 <!-- Otros ejemplos de uso de [contactos]: -->
 <!-- <app-lista-contactos [contactos]="nombres2"></app-lista-contactos>
