@@ -3,21 +3,27 @@ gracias a la directiva FormGroup. En el caso de qerere enlazar
 propeidades del modelo del FormGroup a los elementos input del formulario
 lo haremos usando la directiva formcontrolname -->
 <form [formGroup]="formulario" (ngSubmit)="notificarGuardadoContacto()">
-  <div>
-    <label for="">Nombre</label>
-    <input type="text" formControlName="nombre">
-    <span *ngIf="formulario.get('nombre').touched && formulario.get('nombre').invalid">
-      El nombre de contacto es obligatorio.
-    </span>
+  <div class="row">
+    <div class="offset-by-three six columns">
+      <label for="">Nombre</label>
+      <input class="u-full-width" type="text" formControlName="nombre">
+      <span *ngIf="formulario.get('nombre').touched && formulario.get('nombre').invalid">
+        El nombre de contacto es obligatorio.
+      </span>
+    </div>
   </div>
-  <div>
-    <label for="">Apellidos</label>
-    <input type="text" formControlName="apellidos">
-    <span *ngIf="formulario.get('apellidos').touched && formulario.get('apellidos').invalid">
-      Los apellidos de contacto son obligatorio.
-    </span>
+  <div class="row">
+    <div class="offset-by-three six columns">
+      <label for="">Apellidos</label>
+      <input class="u-full-width" type="text" formControlName="apellidos">
+      <span *ngIf="formulario.get('apellidos').touched && formulario.get('apellidos').invalid">
+        Los apellidos de contacto son obligatorio.
+      </span>
+    </div>
   </div>
-  <div>
-    <button type="submit" [disabled]="formulario.invalid">Guardar contacto</button>
+  <div class="row">
+    <div class="offset-by-three six columns">
+      <button class="u-full-width button-primary" type="submit" [disabled]="formulario.invalid">Guardar contacto</button>
+    </div>
   </div>
 </form>

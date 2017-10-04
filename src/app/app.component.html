@@ -1,25 +1,31 @@
-<header>
-  <h1>Agenda</h1>
-</header>
+<div class="container">
 
-<!--
-Barra de navegación.
-En la directiva routerLink indicamos la ruta (path)
-a la cual queremos navegar cuando pulsemos sobre dicho enlace.
-Esta ruta tiene que estar definida en el módulo de routing.
--->
-<nav>
-  <ul>
-    <li><a routerLink="/lista-contactos">Mis Contactos</a></li>
-    <li><a routerLink="/nuevo-contacto">Nuevo Contacto</a></li>
-  </ul>
-</nav>
+  <header>
+    <h1>Agenda</h1>
+  </header>
 
-<!-- Zona dinámica -->
-<router-outlet></router-outlet>
+  <!--
+  Barra de navegación.
+  En la directiva routerLink indicamos la ruta (path)
+  a la cual queremos navegar cuando pulsemos sobre dicho enlace.
+  Esta ruta tiene que estar definida en el módulo de routing.
+  -->
+  <nav>
+    <ul>
+      <li><a routerLink="/lista-contactos"
+             routerLinkActive="seleccionada">Mis Contactos</a></li>
+      <li><a routerLink="/nuevo-contacto"
+             routerLinkActive="seleccionada">Nuevo Contacto</a></li>
+    </ul>
+  </nav>
 
-<!-- Otros ejemplos de uso de [contactos]: -->
-<!-- <app-lista-contactos [contactos]="nombres2"></app-lista-contactos>
-<app-lista-contactos [contactos]="nombres3"></app-lista-contactos>
-<app-lista-contactos [contactos]="['uno','dos','3']"></app-lista-contactos>
-<app-lista-contactos [contactos]="nombres.slice(0,2)"></app-lista-contactos> -->
+  <!-- Zona dinámica -->
+  <router-outlet></router-outlet>
+
+  <!-- Otros ejemplos de uso de [contactos]: -->
+  <!-- <app-lista-contactos [contactos]="nombres2"></app-lista-contactos>
+  <app-lista-contactos [contactos]="nombres3"></app-lista-contactos>
+  <app-lista-contactos [contactos]="['uno','dos','3']"></app-lista-contactos>
+  <app-lista-contactos [contactos]="nombres.slice(0,2)"></app-lista-contactos> -->
+
+</div>

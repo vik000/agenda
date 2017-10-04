@@ -1,6 +1,12 @@
-<app-lista-contactos
-[contactos]="nombres"
-(botonEliminarPulsado)="contactoEliminado($event)">
-<!--Con [contactos] estoy evaluando primero el array de string/clase Contacto
-antes de pasarlo como atributo. Es necesario en @Input-->
-</app-lista-contactos>
+<div class="row">
+  <div class="six columns">
+    <app-lista-contactos
+    [contactos]="nombres"
+    (botonEliminarPulsado)="contactoEliminado($event)">
+    <!--Con [contactos] estoy evaluando primero el array de string/clase Contacto
+    antes de pasarlo como atributo. Es necesario en @Input-->
+    </app-lista-contactos>
+
+  </div>
+  <div class="six columns"></div>
+</div>

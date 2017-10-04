@@ -16,6 +16,4 @@ export class AppComponent {
     // nombres3:string[]=[
     //   "Chiquito de la Calzada"
     // ];
-
-
 }
