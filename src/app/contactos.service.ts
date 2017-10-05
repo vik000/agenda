@@ -8,12 +8,12 @@ export class ContactosService {
   //como yo no quiero que sean accesibles desde fuera del módulo, añado private
   //por convención, los private empiezan por _guiónBajo
   private _nombres:Contacto[]=[
-    new Contacto (1,"Steve", "Jobs"),
-    new Contacto (2,"Steve","Wozniak"),
-    new Contacto (3,"Bill","Gates"),
-    new Contacto (4,"Sundar","Pichai"),
-    new Contacto (5,"Elon","Musk"),
-    new Contacto (6,"Bob","Esponja")
+    new Contacto (1,"Steve", "Jobs", "555 666 777", 'steve.jobs@apple.com'),
+    new Contacto (2,"Steve","Wozniak", "565 676 777", 'steve.wozniak@apple.com'),
+    new Contacto (3,"Bill","Gates", "556 256 123", 'bill.gates@microsoft.com'),
+    new Contacto (4,"Sundar","Pichai", null, 'sundar.pichai@google.com'),
+    new Contacto (5,"Elon","Musk", "555 666 745", 'elon.musk@tesla.com'),
+    new Contacto (6,"Bob","Esponja", "999 668 677", 'bob.esponja@dibus.com')
   ];
 
   obtenerContactos(): Contacto[]{
