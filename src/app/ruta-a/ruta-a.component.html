@@ -2,13 +2,16 @@
   <div class="six columns">
     <app-lista-contactos
     [contactos]="nombres"
-    (botonEliminarPulsado)="contactoEliminado($event)">
+    (botonEliminarPulsado)="contactoEliminado($event)"
+    (contactoSeleccionado)=verDetalles($event)>
     <!--Con [contactos] estoy evaluando primero el array de string/clase Contacto
     antes de pasarlo como atributo. Es necesario en @Input-->
     </app-lista-contactos>
 
   </div>
   <div class="six columns">
-    <app-detalles-contacto></app-detalles-contacto>
+    <app-detalles-contacto [contacto]="contactoSeleccionado">
+      <!-- METER COMO ATRIBUTO!!!  -->
+    </app-detalles-contacto>
   </div>
 </div>

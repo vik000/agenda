@@ -1,3 +1,10 @@
-<p>
-  detalles-contacto works!
-</p>
+<div *ngIf="contacto">
+  <h4>{{contacto.nombre}} {{contacto.apellidos}}</h4>
+  <hr>
+  <button>Facebook</button>
+  <button>Twitter</button>
+  <hr>
+  <div class="">
+    {{contacto.email}} | {{contacto.movil}}
+  </div>
+</div>
