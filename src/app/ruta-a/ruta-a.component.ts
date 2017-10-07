@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ContactosService } from '../contactos.service';
+import { Observable } from 'rxjs/Observable';
 import { Contacto } from '../contacto';
 
 @Component({
@@ -9,8 +10,8 @@ import { Contacto } from '../contacto';
 })
 export class RutaAComponent implements OnInit {
 
-  nombres:Contacto[];
   contactoSeleccionado:Contacto;
+  contacto$:Observable<Contacto[]>;
   //para hacer la inyección de dependencias de un servicio
   //debemos hacerlo en el constructor de la clase.
   //Anotamos un parámetro con el tipo de sercicio a inyectar
@@ -21,13 +22,13 @@ export class RutaAComponent implements OnInit {
 
   ngOnInit():void{ //con void estamos tipando la clase de la función.
     //console.log('Estoy en el hook OnInit! :D');
-    this.nombres = this._contactosService.obtenerContactos();
+    this.contacto$ = this._contactosService.obtenerContactos();
   }
 
   contactoEliminado(nombre:Contacto):void{
     //console.log(nombre);
     this._contactosService.contactoEliminado(nombre);
-    this.nombres = this._contactosService.obtenerContactos(); //con esto estoy actualizando los valores de la lista, que si no no sale
+    //this.nombres = this._contactosService.obtenerContactos(); //con esto estoy actualizando los valores de la lista, que si no no sale
   }
 
   verDetalles(nombre:Contacto):void{

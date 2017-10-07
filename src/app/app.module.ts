@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { ListaContactosComponent } from './lista-contactos/lista-contactos.component';
@@ -29,6 +30,7 @@ import { DetallesContactoComponent } from './detalles-contacto/detalles-contacto
     BrowserModule, //Este import hace que se vea como una web, para hacer una nativa, importaremos otra cosa.
     ReactiveFormsModule,
     AppRoutingModule,
+    HttpClientModule
   ],
   //En providers indicamos todos aquellos proveedores de clase o valores que puedan ser inyectados (servicios y dependendencias, por ejemplo)
   //Cli no nos lo mete por defecto al generarlo como hace con componentes

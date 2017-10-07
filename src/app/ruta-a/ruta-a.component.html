@@ -1,7 +1,7 @@
 <div class="row">
   <div class="six columns">
     <app-lista-contactos
-    [contactos]="nombres"
+    [contactos]="contacto$ | async"
     (botonEliminarPulsado)="contactoEliminado($event)"
     (contactoSeleccionado)=verDetalles($event)>
     <!--Con [contactos] estoy evaluando primero el array de string/clase Contacto
