@@ -1,40 +1,44 @@
 {
-  "contactos":[
+  "contactos": [
     {
-      "id":1,
-      "nombre":"Steve",
+      "id": 1,
+      "nombre": "Steve",
       "apellidos": "Jobs",
       "movil": "555 666 777",
       "email": "steve.jobs@apple.com"
     },
     {
-      "id":2,
-      "nombre":"Steve",
+      "id": 2,
+      "nombre": "Steve",
       "apellidos": "Wozniak",
       "movil": "565 676 777",
       "email": "steve.wozniak@apple.com"
     },
     {
-      "id":3,
-      "nombre":"Bill",
+      "id": 3,
+      "nombre": "Bill",
       "apellidos": "Gates",
       "movil": "556 256 123",
       "email": "bill.gates@microsoft.com"
     },
     {
-      "id":5,
-      "nombre":"Steve",
+      "id": 5,
+      "nombre": "Steve",
       "apellidos": "Jobs",
       "movil": "555 666 777",
       "email": "steve.jobs@apple.com"
     },
     {
-      "id":6,
-      "nombre":"Bob",
+      "id": 6,
+      "nombre": "Bob",
       "apellidos": "Esponja",
       "movil": "999 668 677",
       "email": "bob.esponja@dibus.com"
+    },
+    {
+      "nombre": "Patricio",
+      "apellidos": "Estrella",
+      "id": 7
     }
-
   ]
 }

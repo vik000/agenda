@@ -19,8 +19,8 @@ export class RutaBComponent {
 
   crearContacto(contacto:Contacto):void{
     //vamos a buscar el servicio.
-    this._contactosService.agregarContacto(contacto);
-    this._router.navigate(['/lista-contactos']);
+    this._contactosService.agregarContacto(contacto).subscribe(()=>this._router.navigate(['/lista-contactos']));
+    //En este caso metemos la función de navegación dentro subscribe para que la ejecute cuando haya acabado con la función de agregar que le precede.
   }
 
 }
